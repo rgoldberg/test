@@ -1,5 +1,6 @@
 ---
 name: Bug Report Test
+description: File a bug report.
 labels: ["\U0001F41B bug"]
 body:
   - type: input
