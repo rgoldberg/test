@@ -1,6 +1,5 @@
 name: Bug Report Test
 description: File a bug report.
-title: ""
 labels: ["bug", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
 assignees:
