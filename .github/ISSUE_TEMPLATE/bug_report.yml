@@ -19,16 +19,25 @@ body:
       placeholder: ex. 15.1.1
     validations:
       required: true
+  - type: input
+    id: macos-build
+    attributes:
+      label: macOS build version
+      description: The output of `sw_vers -buildVersion`
+      placeholder: ex. 24B2091
+    validations:
+      required: true
   - type: dropdown
     id: install-method
     attributes:
       label: mas installation method
       options:
-        - Homebrew core (`brew install mas`)
-        - Homebrew custom tap (`brew install mas-cli/tap/mas`)
-        - GitHub Releases (<https://github.com/mas-cli/mas/releases>)
+        - Homebrew core (brew install mas)
+        - Homebrew custom tap (brew install mas-cli/tap/mas)
+        - GitHub Releases (https://github.com/mas-cli/mas/releases)
         - Built from source
         - Other
+      default: 0
     validations:
       required: true
   - type: textarea
@@ -36,14 +45,17 @@ body:
     attributes:
       label: mas installation details
       value: |
-        <!--if you selected the "Other" installation method, provide details-->
-        <!--if you installed from GitHub Releases, provide URL of installer-->
-        <!--if you built from source, uncomment the following comment & provide values-->
+        <!--if you selected the "Other" installation method, provide details below-->
+
+        <!--if you installed from GitHub Releases, provide URL of installer below-->
+
+        <!--if you built from source, uncomment the following comment & provide all 4 values-->
+
         <!--
-        - git origin URL:
-        - git revision:
-        - git tag/branch:
-        - Xcode version:
+        - git origin URL: 
+        - git revision: 
+        - git tag/branch: 
+        - Xcode version: 
         -->
     validations:
       required: false
@@ -65,7 +77,9 @@ body:
     id: reproduction
     attributes:
       label: Steps to reproduce
-      description: Provide commands to reproduce the bug; write non-shell steps as comments (`# …`)
+      description: |
+        Provide commands to reproduce the bug in the multiline shell code block.
+        Write non-shell steps as comments (`# …`).
       value: |
         ```shell
 
