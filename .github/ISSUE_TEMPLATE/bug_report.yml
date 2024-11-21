@@ -78,8 +78,7 @@ body:
     attributes:
       label: Steps to reproduce
       description: |
-        Provide commands to reproduce the bug in the multiline shell code block.
-        Write non-shell steps as comments (`# …`).
+        Provide commands to reproduce the bug in the multiline shell block. Write non-shell steps as comments (`# …`).
       value: |
         ```shell
 
