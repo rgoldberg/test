@@ -1,7 +1,10 @@
-name: Bug Report
-description: Report a bug.
-title: ""
-labels: ["\U0001F41B bug"]
+name: Bug Report Test
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
 body:
   - type: input
     id: mas-version
