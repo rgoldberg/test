@@ -13,7 +13,7 @@ body:
         - Use a multiline console block: start with ```` ```console ````, end with ```` ``` ````, each on its own line
         - Prefix each non-console step (or comment) with two hashes & a space: `## …`
         - Remove shell prompts; instead, prefix each console command with a dollar sign & a space: `$ …`
-        - Prefix each output line that begins with `#`, `$`, `%`, or `>` with an additional instance of that <!--
+        - Prefix each output line beginning with `#`, `$`, `%`, or `>` with an additional instance of that <!--
           --> character: `##…`, `$$…`, `%%…`, or `>>…`
         - Write all other output lines without any prefix: `…`
 
