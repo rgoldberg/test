@@ -6,14 +6,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Console Command & Output Formatting
+        # Console command & output formatting
 
         When providing commands & output, please use the following format (where `…` is a placeholder):
 
         - Use a multiline console block: start with ```` ```console ````, end with ```` ``` ````, each on its own line
         - Prefix each non-console step (or comment) with two hashes & a space: `## …`
         - Remove shell prompts; instead, prefix each console command with a dollar sign & a space: `$ …`
-        - Write console output without any prefix: `…`
+        - Prefix each output line that begins with `#`, `$`, `%`, or `>` with an additional instance of that <!--
+          --> character: `##…`, `$$…`, `%%…`, or `>>…`
+        - Write all other output lines without any prefix: `…`
 
         e.g.:
 
