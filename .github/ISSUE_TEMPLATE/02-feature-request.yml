@@ -33,31 +33,35 @@ body:
     id: problems
     attributes:
       label: Problem(s) addressed
-      placeholder: Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed
-        above) instead of screenshots
+      placeholder:
+        Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed above) instead
+        of screenshots
     validations:
       required: true
   - type: textarea
     id: proposals
     attributes:
       label: Proposed solution(s)
-      placeholder: Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed
-        above) instead of screenshots
+      placeholder:
+        Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed above) instead
+        of screenshots
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
       label: Alternative solution(s)
-      placeholder: Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed
-        above) instead of screenshots
+      placeholder:
+        Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed above) instead
+        of screenshots
     validations:
       required: false
   - type: textarea
     id: context
     attributes:
       label: Additional context
-      placeholder: Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed
-        above) instead of screenshots
+      placeholder:
+        Prefer copied, pasted & formatted commands & output in a multiline console block (as instructed above) instead
+        of screenshots
     validations:
       required: false
