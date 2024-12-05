@@ -342,4 +342,3 @@ Code is under the [MIT license](LICENSE).
 
 [homebrew-bundle]: https://github.com/Homebrew/homebrew-bundle
 [`softwareupdate(8)`]: https://www.unix.com/man-page/osx/8/softwareupdate/
-[Quick]: https://github.com/Quick/Quick
