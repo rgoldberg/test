@@ -1,5 +1,3 @@
-<h1 align="center"><img src="mas-cli.png" alt="mas-cli" width="450" height="138"></h1>
-
 # mas
 
 A command-line interface for the Mac App Store. Designed for scripting and automation.
