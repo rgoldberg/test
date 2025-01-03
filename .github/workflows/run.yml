@@ -20,7 +20,7 @@ jobs:
       COMMANDS: ${{inputs.commands}}
     steps:
        - name: Run commands
-         run: ${COMMANDS}
+         run: eval "${COMMANDS}"
 
        - name: Upload files as artifact
          if: inputs.artifact-directory != ''
