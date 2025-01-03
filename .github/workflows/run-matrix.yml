@@ -33,5 +33,5 @@ jobs:
          if: inputs.artifact-directory != ''
          uses: actions/upload-artifact@v4
          with:
-           name: output
+           name: output_${{matrix.os}}
            path: ${{inputs.artifact-directory}}*
