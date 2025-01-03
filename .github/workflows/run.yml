@@ -1,0 +1,19 @@
+name: run
+on:
+  workflow_dispatch:
+    inputs:
+      commands:
+        type: string
+        description: zsh commands to run
+        required: true
+defaults:
+  run:
+    shell: /bin/zsh -Negku {0}
+jobs:
+  run:
+    runs-on: macos-15
+    env:
+      COMMANDS: ${{inputs.commands}}
+    steps:
+       - name: Run commands
+         run: ${COMMANDS}
