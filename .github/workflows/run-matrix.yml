@@ -1,0 +1,37 @@
+name: run-matrix
+on:
+  workflow_dispatch:
+    inputs:
+      runner-types:
+        type: string
+        description: runner type(s) on which commands will run
+        required: true
+      commands:
+        type: string
+        description: zsh commands to run
+        required: true
+      artifact-directory:
+        type: string
+        description: directory whose contents will be uploaded as artifacts
+        required: false
+defaults:
+  run:
+    shell: /bin/zsh -Negku {0}
+jobs:
+  run:
+    strategy:
+      matrix:
+        os: ${{fromJSON(inputs.runner-types)}}
+    runs-on: ${{matrix.os}}
+    env:
+      COMMANDS: ${{inputs.commands}}
+    steps:
+       - name: Run commands
+         run: eval "${COMMANDS}"
+
+       - name: Upload files as artifact
+         if: inputs.artifact-directory != ''
+         uses: actions/upload-artifact@v4
+         with:
+           name: output
+           path: ${{inputs.artifact-directory}}*

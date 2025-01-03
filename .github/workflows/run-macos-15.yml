@@ -1,4 +1,4 @@
-name: run
+name: run-macos-15
 on:
   workflow_dispatch:
     inputs:
