@@ -6,6 +6,10 @@ on:
         type: string
         description: zsh commands to run
         required: true
+      artifact-directory:
+        type: string
+        description: directory whose contents will be uploaded as artifacts
+        required: false
 defaults:
   run:
     shell: /bin/zsh -Negku {0}
@@ -17,3 +21,10 @@ jobs:
     steps:
        - name: Run commands
          run: ${COMMANDS}
+
+       - name: Upload files as artifact
+         if: inputs.artifact-directory != ''
+         uses: actions/upload-artifact@v4
+         with:
+           name: output
+           path: ${{inputs.artifact-directory}}*
